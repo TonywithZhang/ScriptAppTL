@@ -30,39 +30,18 @@ namespace ScriptAppTL
             set
             {
                 _faces = value;
-                this.Show();
-                showData();
             }
         }
 
-        private RenderWindow3d window;
-        private TopoShapeConvert convertor;
-        private View3d theView;
-        private AnyCAD.Platform.Application app = new AnyCAD.Platform.Application();
 
         public ModelWindow()
         {
             InitializeComponent();
-            window = new RenderWindow3d();
-            convertor = new TopoShapeConvert();
-        }
-
-        private void showData()
-        {
-            int id = 1;
-            foreach(var face in _faces)
-            {
-
-            }
-        }
-        public override void BeginInit()
-        {
-            base.BeginInit();
-            app.Initialize();
-            Size size = this.RenderSize;
-            theView = app.CreateView(new WindowInteropHelper(this).Handle.ToInt32(),Convert.ToInt32(size.Width) ,Convert.ToInt32(size.Height));
-            theView.RequestDraw(10);
+            MeshGeometry3D  model= new MeshGeometry3D();
+            Point3DCollection points = new Point3DCollection();
             
         }
+
+
     }
 }

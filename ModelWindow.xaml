@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ScriptAppTL"
         mc:Ignorable="d"
         Title="ModelWindow" Height="450" Width="800">
-    <Grid>
+    <Viewport3D x:Name="viewPort">
         
-    </Grid>
+    </Viewport3D>
 </Window>
